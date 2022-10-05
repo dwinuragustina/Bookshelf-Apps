@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bookshelf Apps</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+
+    <body>
+    	<header class="head_bar" id="content">
+            <h1 class="head_bar__title"><i class="fas fa-book"></i> Bookshelf Apps <i class="fas fa-book"></i></h1>
+        </header>
+
+        <main>
+            <section class="message_container" hidden>
+                <div class="message">
+                    <p>Added Book Data Successfully</p>
+                    <div class="button_close_container">
+                        <button class="fas fa-window-close" id="buttonClose"></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="input_section shadow">
+                <h2>Add New Book</h2>
+                <form id="inputBook">
+                    <div class="input">
+                        <label for="inputBookTitle">Title</label>
+                        <input id="inputBookTitle" type="text" placeholder="Book Title" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="inputBookAuthor">Author</label>
+                        <input id="inputBookAuthor" type="text" placeholder="Book Author" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="inputBookYear">Year</label>
+                        <input id="inputBookYear" type="number" placeholder="Publish Year" required>
+                    </div>
+
+                    <div class="input_inline">
+                        <label for="inputBookIsComplete">Finished Reading</label>
+                        <input id="inputBookIsComplete" type="checkbox">
+                        <p>*Please tick when you finished reading</p>
+                    </div>
+
+                    <button id="bookSubmit" type="submit">Insert to Bookshelf</button>
+                </form>
+            </section>
+
+            <section class="search_section shadow">
+                <h2>Search Book</h2>
+                <form id="searchBook">
+                    <label for="searchBookTitle">Title</label>
+                    <input id="searchBookTitle" type="text" placeholder="Book Title">
+                    <button id="searchSubmit" type="submit">Search</button>
+                </form>
+            </section>
+
+            <section class="book_shelf shadow" hidden>
+                <div class="head_result_search">
+                    <h2>Result Search</h2>
+                    <div class="button_search_container">
+                        <button class="fas fa-window-close" id="buttonResultSearch"></button>
+                    </div>
+                </div>
+
+                <div id="searchResult" class="book_list"></div>
+            </section>
+
+            <section class="book_shelf shadow">
+                <h2>Unfinished Reading</h2>
+                <div id="incompleteBookshelfList" class="book_list"></div>
+            </section>
+
+            <section class="book_shelf shadow">
+                <h2>Finished Reading</h2>
+                <div id="completeBookshelfList" class="book_list"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Dwi Nur Agustina</p>
+        </footer>
+
+        <script src="assets/data.js"></script>
+        <script src="assets/dom.js"></script>
+        <script src="assets/script.js"></script>
+    </body>
+</html>
